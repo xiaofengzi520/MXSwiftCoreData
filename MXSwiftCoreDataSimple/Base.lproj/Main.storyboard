@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MXSwiftCoreDataSimple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhW-G0-E8c">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.78186383928571423" green="0.40407366071428569" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3iD-uB-Ftt"/>
+                                </constraints>
+                                <state key="normal" title="上传照片">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickerImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MyO-R2-3R3"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ldb-UQ-8bY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FhW-G0-E8c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0o2-Hf-tev"/>
+                            <constraint firstItem="Ldb-UQ-8bY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XZH-zk-Y1S"/>
+                            <constraint firstAttribute="trailing" secondItem="FhW-G0-E8c" secondAttribute="trailing" id="ZYH-rD-4Eb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FhW-G0-E8c" secondAttribute="bottom" id="hyN-W3-U16"/>
+                            <constraint firstItem="FhW-G0-E8c" firstAttribute="top" secondItem="Ldb-UQ-8bY" secondAttribute="bottom" id="noq-9l-Gif"/>
+                            <constraint firstAttribute="trailing" secondItem="Ldb-UQ-8bY" secondAttribute="trailing" id="tmF-T3-A9y"/>
+                            <constraint firstItem="Ldb-UQ-8bY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yxc-cl-TQh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ldb-UQ-8bY" id="Qfc-de-Pyo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
